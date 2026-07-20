@@ -7,7 +7,7 @@ vectornav:
     port: "/dev/vn100"
     baud: 921600
     adjust_ros_timestamp: True
-    reconnect_ms: 500
+    reconnect_ms: -1
     # Reference vnproglib-1.2.0.0 headers for enum definitions
     # Async Output Type (ASCII)
     # leave this at zero to select binary format

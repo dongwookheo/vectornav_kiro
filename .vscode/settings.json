@@ -68,4 +68,23 @@
         "rclcpp"
     ],
     "C_Cpp.clang_format_fallbackStyle": "{ ColumnLimit: 100 }",
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/hdwook/Documents/sensor_ws/install/mint_sensor_watchdog_ros2/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/io_loc/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/vectornav_msgs/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/sw_watchdog_msgs/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/septentrio_gnss_driver/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/livox_ws/install/livox_ros_driver2/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/hdwook/Documents/sensor_ws/install/mint_sensor_watchdog_ros2/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/io_loc/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/vectornav_msgs/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/sw_watchdog_msgs/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/sensor_ws/install/septentrio_gnss_driver/lib/python3.12/site-packages",
+        "/home/hdwook/Documents/livox_ws/install/livox_ros_driver2/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
 }

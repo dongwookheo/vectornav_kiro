@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -9,7 +10,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     this_dir = get_package_share_directory("vectornav")
-    config_path = os.path.join(this_dir, "config", "vn_100_800hz.yaml")
+    config_path = Path(this_dir) / "config" / "vn_100_800hz.yaml"
 
     # Vectornav
     start_vectornav_cmd = Node(

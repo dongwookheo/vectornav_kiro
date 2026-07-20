@@ -1,12 +1,11 @@
-port: "/dev/vn100"
-baud: 921600
-adjust_ros_timestamp: True
-reconnect_ms: -1
+port: "/dev/ttyUSB0"
+baud: 115200
+reconnect_ms: 500
 # Reference vnproglib-1.2.0.0 headers for enum definitions
 # Async Output Type (ASCII)
 AsyncDataOutputType: 0           # VNOFF
 # Async output Frequency (Hz)
-AsyncDataOutputFrequency: 1
+AsyncDataOutputFrequency: 20
 # Sync control
 syncInMode: 3                    # SYNCINMODE_COUNT
 syncInEdge: 0                    # SYNCINEDGE_RISING
@@ -25,13 +24,13 @@ spiChecksum: 0                   # CHECKSUMMODE_OFF
 errorMode: 1                     # ERRORMODE_SEND
 # Binary output register 1
 BO1:
-  asyncMode: 1                   # send only on port 1 to save serial bandwidth
-  rateDivisor: 4                 # 800 / rateDivisor = 200 Hz
-  commonField: 0x731             # IMU, attitude, compensated accel/gyro, mag/pressure/temp
+  asyncMode: 3                   # ASYNCMODE_BOTH
+  rateDivisor: 40                # 20 Hz
+  commonField: 0x7FFF
   timeField: 0x0000              # TIMEGROUP_NONE
   imuField: 0x0000               # IMUGROUP_NONE
   # set gpsField directly in source to enforce or condition
-  attitudeField: 0x0107          # VPE status, YPR, quaternion, YPR uncertainty
+  attitudeField: 0x0000          # ATTITUDEGROUP_NONE
   # set insField directly in source to enforce or condition
   gps2Field: 0x0000              # GPSGROUP_NONE
 # Binary output register 2
